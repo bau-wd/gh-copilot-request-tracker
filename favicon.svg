@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#1c1c1a"/>
+  <!-- bar chart representing budget -->
+  <rect x="5" y="18" width="5" height="9" rx="1.5" fill="#639922"/>
+  <rect x="13.5" y="12" width="5" height="15" rx="1.5" fill="#EF9F27"/>
+  <rect x="22" y="6" width="5" height="21" rx="1.5" fill="#E24B4A"/>
+  <!-- small copilot-style dot -->
+  <circle cx="16" cy="4.5" r="1.5" fill="#5aa3f0"/>
+</svg>
