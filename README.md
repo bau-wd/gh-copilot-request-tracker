@@ -1,6 +1,6 @@
 # Copilot Budget Tracker
 
-A lightweight, single-file web app that helps you stay on top of your [GitHub Copilot premium request](https://docs.github.com/en/copilot/concepts/billing/copilot-requests) allowance throughout the month.
+A lightweight, single-file web app that helps you stay on top of your [GitHub Copilot premium request](https://docs.github.com/en/copilot/concepts/billing/copilot-requests) allowance throughout the month — with working-day-aware budgeting that skips weekends and Austrian public holidays.
 
 ![Status](https://img.shields.io/badge/status-active-639922?style=flat-square) ![No dependencies](https://img.shields.io/badge/dependencies-none-5aa3f0?style=flat-square) ![GitHub Pages](https://img.shields.io/badge/hosted%20on-GitHub%20Pages-1c1c1a?style=flat-square)
 
@@ -8,10 +8,33 @@ A lightweight, single-file web app that helps you stay on top of your [GitHub Co
 
 Enter your monthly quota and the percentage shown on your GitHub billing page — the tracker calculates:
 
-- **Daily budget** — how many requests you can safely spend per remaining day
+- **Daily budget** — how many requests you can safely spend per remaining *working* day
 - **Estimated today usage** — how much of today's daily allowance is already consumed
 - **Pace status** — whether you're ahead of, on, or behind the ideal burn rate
 - Color-coded bars and status banner (green / yellow / red) so you know at a glance where you stand
+- Automatic note when today is a weekend or public holiday
+
+## Working-day calendar
+
+The budget is spread across working days only — weekends (Saturday, Sunday) and all Austrian public holidays are excluded. Holidays are computed dynamically for the current year:
+
+| Date | Holiday |
+|---|---|
+| 1 Jan | Neujahr |
+| 6 Jan | Heilige Drei Könige |
+| Easter Monday | Ostermontag |
+| 1 May | Staatsfeiertag |
+| Ascension (+39) | Christi Himmelfahrt |
+| Whit Monday (+50) | Pfingstmontag |
+| Corpus Christi (+60) | Fronleichnam |
+| 15 Aug | Mariä Himmelfahrt |
+| 26 Oct | Nationalfeiertag |
+| 1 Nov | Allerheiligen |
+| 8 Dec | Mariä Empfängnis |
+| 25 Dec | Christtag |
+| 26 Dec | Stefanitag |
+
+Easter-relative holidays are calculated using the Anonymous Gregorian algorithm, so they're always correct regardless of year.
 
 ## Usage
 
